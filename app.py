@@ -118,10 +118,10 @@ def fetch_item_by_product_name(product_name):
         if clean_name_query in combined_search_string:
             print(f"Local database match found for '{clean_name_query}' inside inventory.py")
     
-        return jsonify({
-            "status": "success",
-            "data": item
-        }), 200
+            return jsonify({
+                "status": "success",
+                "data": item
+            }), 200
     #Fallback to OpenFoodFacts live API if not found in local inventory
     params = {
         "search_terms": product_name,

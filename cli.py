@@ -139,12 +139,14 @@ def update_item():
     payload = {}
     if price: payload["price"] = float(price)
     if stock: payload["stock_quantity"] = int(stock)
+    if not payload:
+        print("No changes were entered.")
+        return
 
     try:
-        response = requests.get(f"{API_BASE_URL}/inventory/{barcode}", json=payload)
+        response = requests.patch(f"{API_BASE_URL}/inventory/{barcode}", json=payload)
         if response.status_code == 200:
-            print("Product updated successfully")
-
+            print("Product updated successfully.")
         else:
             print("Product not found.")
                
