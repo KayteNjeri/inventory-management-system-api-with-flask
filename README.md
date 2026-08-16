@@ -169,7 +169,7 @@ The menu provides:
 The CLI communicates with the Flask application using HTTP requests
 rather than directly modifying the inventory data.
 
-⚙️ ## Installation
+## ⚙️Installation
 
 ### 1. Clone the repository
 
@@ -198,7 +198,7 @@ To install the main packages directly:
 pip install flask requests pytest
 ```
 
-▶️ ## Running the Application
+## ▶️Running the Application
 
 Start the Flask API:
 
@@ -260,7 +260,7 @@ The test suite covers:
 `unittest.mock` is used to simulate API responses so that unit tests do
 not depend on live external API calls.
 
-🔗 ## API Endpoint Summary
+## 🔗API Endpoint Summary
 
   ----------------------------------------------------------------------------------
   Method                  Endpoint                           Description
@@ -284,7 +284,7 @@ not depend on live external API calls.
                                                              item
   ----------------------------------------------------------------------------------
 
-❗ ## Error Handling
+## ❗Error Handling
 
 The application handles common errors including:
 
@@ -306,7 +306,7 @@ Appropriate HTTP status codes are returned by the Flask API, including:
 500 Internal Server Error
 ```
 
-🧪 ## Testing with Postman
+## 🧪 Testing with Postman
 
 The Flask API can be tested using Postman.
 
@@ -324,25 +324,25 @@ Flask debug mode is enabled during local development to assist with
 debugging.
 
 
-🔮 ## Future Improvements
+## 🔮Future Improvements
 
 Possible future improvements include:
 
 -   Migrating from simulated Python-list storage to a relational
     database.
--   Adding authentication and administrator roles.
+-   Adding authentication.
 -   Adding inventory categories and suppliers.
 -   Adding pagination and advanced product search.
 -   Adding a web-based frontend.
 -   Migrating external API integration to newer OpenFoodFacts API
     functionality where appropriate.
 
-👩🏽‍💻 ## Author
+## 👩🏽‍💻Author
 
 **Inventory Management System**
 
 Developed as part of Python REST API with Flask assessment project to demonstrate backend dveleopment concepts and practices.
 
-📄 ## License
+## 📄License
 
 This project is licensed under MIT Licence.
