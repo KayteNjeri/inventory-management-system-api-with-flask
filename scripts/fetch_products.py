@@ -1,12 +1,12 @@
 import requests
 import json
 from pathlib import Path
-import pprint
-from pprint import pformat
+
 
 BASE_URL = "https://world.openfoodfacts.org/"
 
 def fetch_products_by_barcode(barcode):
+    #Standard OpenFoodFacts v2 product endpoint.
     url = f"{BASE_URL}api/v2/product/{barcode}.json"
 
     headers = {
@@ -14,7 +14,7 @@ def fetch_products_by_barcode(barcode):
 
     try:
         # send the HHTP GET request to the OpenFoodFacts API
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, timeout=10)
 
         #check if the request was successful
         if response.status_code == 200:    
@@ -66,8 +66,12 @@ def save_product_info_to_inventory(product, barcode):
     else:
         inventory = []
 
-    
-    #Generate the next id
+    #if the product already exists in the inventory, do not add it again
+    if any(str(item["barcode"]) == str(barcode) for item in inventory):
+        print(f"Product with barcode {barcode} already exists in inventory.")
+        return
+
+    #Generate the next id, if the inventory is empty, start with id 1
     if inventory:
         next_id = max(item["id"] for item in inventory) + 1
     else:
@@ -77,6 +81,8 @@ def save_product_info_to_inventory(product, barcode):
     new_product = {
         "id": next_id,
         "barcode": barcode,
+        "price": 0.0,  # Default price, can be updated later
+        "stock_quantity": 0,  # Default stock quantity, can be updated later
         "product_info": product
     }
     inventory.append(new_product)
