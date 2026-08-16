@@ -54,7 +54,7 @@ def view_all_items():
         else:
             print(f"Error fetching inventory: {response.status_code}")
     except requests.RequestException as error:
-        print(f"Connection failed: Is your app.py server running? {e}")
+        print(f"Connection failed: Is your app.py server running? {error}")
 
 #view a single item by barcode
 def view_item_by_barcode():
@@ -75,7 +75,7 @@ def view_item_by_barcode():
 def view_item_by_name():
     product_name = input("Enter the name of the product: ").strip()
     try:
-        response = requests.get(f"{API_BASE_URL}/inventory/{product_name}")
+        response = requests.get(f"{API_BASE_URL}/inventory/name/{product_name}")
         if response.status_code == 200:
             item = response.json().get("data", {})
             prod = item.get("product_info", {}).get("product", {})

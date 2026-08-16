@@ -2,6 +2,8 @@ inventory = [
     {
         "id": 1,
         "barcode": "3017620422003",
+        "price": 0.0,
+        "stock_quantity": 0,
         "product_info": {
             "status": 1,
             "product": {
@@ -16,6 +18,8 @@ inventory = [
     {
         "id": 2,
         "barcode": "737628064502",
+        "price": 0.0,
+        "stock_quantity": 0,
         "product_info": {
             "status": 1,
             "product": {
@@ -30,6 +34,8 @@ inventory = [
     {
         "id": 3,
         "barcode": "5000159484695",
+        "price": 0.0,
+        "stock_quantity": 0,
         "product_info": {
             "status": 1,
             "product": {
@@ -44,6 +50,8 @@ inventory = [
     {
         "id": 4,
         "barcode": "8000500310427",
+        "price": 0.0,
+        "stock_quantity": 0,
         "product_info": {
             "status": 1,
             "product": {
@@ -58,6 +66,8 @@ inventory = [
     {
         "id": 5,
         "barcode": "7622210449283",
+        "price": 0.0,
+        "stock_quantity": 0,
         "product_info": {
             "status": 1,
             "product": {

@@ -102,7 +102,7 @@ def fetch_item_by_barcode_id(id):
         return jsonify({"error": f"Connection failed: {error}"}), 500
 
 3. #GET /inventory/<name> → Fetch a single item using product name
-@app.route('/inventory/<product_name>', methods=['GET'])
+@app.route('/inventory/name/<product_name>', methods=['GET'])
 def fetch_item_by_product_name(product_name):
 
     clean_name_query = unquote(product_name).strip().lower()
