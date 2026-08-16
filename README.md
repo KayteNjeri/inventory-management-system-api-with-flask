@@ -103,6 +103,8 @@ INVENTORY-MANAGEMENT/
   `Pipfile`                           Python dependency configuration.
 
   `Pipfile.lock`                      Locked dependency versions.
+
+ 
   -----------------------------------------------------------------------
 
 ------------------------------------------------------------------------
@@ -143,7 +145,7 @@ stock quantity, and product information.
 The application updates the inventory list when products are added,
 updated, or deleted.
 
-🌐 ## CLI Application
+## 🌐CLI Application
 
 The CLI provides a simple menu for employees to interact with the
 inventory system.
@@ -282,6 +284,8 @@ not depend on live external API calls.
 
   DELETE                  `/inventory/<id>`                  Delete an inventory
                                                              item
+
+
   ----------------------------------------------------------------------------------
 
 ## ❗Error Handling
@@ -312,7 +316,7 @@ The Flask API can be tested using Postman.
 
 Recommended requests to validate the application:
 
-1.  `GET /inventory`
+1.  `GET /inventory` Below is a sample test for GET/inventory on Postman.
 ![alt text](image.png)
 2.  `GET /inventory/<barcode>`
 3.  `GET /inventory/name/<product_name>`
