@@ -1,6 +1,6 @@
-🛒 # Inventory Management System
+# 🛒 Inventory Management System
 
-📋 ## Project Description
+## 📋Project Description
 
 This project is an **Inventory Management System** built with **Python,
 Flask, and a command-line interface (CLI)**.
@@ -15,7 +15,7 @@ and is updated when inventory items are added, edited, or deleted.
 
 ------------------------------------------------------------------------
 
-🚀 ## Project Objectives
+## 🚀Project Objectives
 
 The system was developed to provide the following functionality:
 
@@ -32,7 +32,7 @@ The system was developed to provide the following functionality:
 
 ------------------------------------------------------------------------
 
-🛠️ ## Technologies Used
+## 🛠️Technologies Used
 
 -   **Python**
 -   **Flask** -- REST API
@@ -44,7 +44,7 @@ The system was developed to provide the following functionality:
 
 ------------------------------------------------------------------------
 
-📁 ## Project Structure
+## 📁Project Structure
 
 ``` text
 INVENTORY-MANAGEMENT/
@@ -107,7 +107,7 @@ INVENTORY-MANAGEMENT/
 
 ------------------------------------------------------------------------
 
-📦 # Inventory Data
+# 📦Inventory Data
 
 The inventory is stored in:
 ``` text
